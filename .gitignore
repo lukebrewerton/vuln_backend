@@ -1,0 +1,22 @@
+#Ignore cache files
+__pycache__/
+core/__pycache__/
+
+# PyCharm files
+.idea/
+# Sphinx documentation
+docs/_build/
+
+#Vuln_files contents
+tmp/*
+!tmp/.gitkeep
+
+#Remove Log Files
+logs/*
+!logs/.gitkeep
+<<<<<<< HEAD
+
+.git-old
+=======
+.git-old
+>>>>>>> release/v1.0
