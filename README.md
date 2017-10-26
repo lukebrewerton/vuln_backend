@@ -38,6 +38,14 @@ i.e. `0 1 * * 0-6 python3 /root/bin/vuln_backend/main.py >/dev/null 2>&1`
 
 Download the Zip of the script and extract to an easily accessible folder i.e. `/root/bin/vuln_backend`
 
+You will need to setup the MySQL/MariaDB and MongoDB databases.
+
+Thos MongoDB database is named `vulnerabilities` and this will need a collection named `vuln_sets`
+
+Then set the appropriate values in config.ini
+
+Navigate to the installation directory and run `pip install -r requirements.txt`
+
 [(Back to top)](#table-of-contents)
 
 
