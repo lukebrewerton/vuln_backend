@@ -43,7 +43,17 @@ You will need to setup the MySQL/MariaDB and MongoDB databases.
 
 Thos MongoDB database is named `vulnerabilities` and this will need a collection named `vuln_sets`
 
-Then set the appropriate values in config.ini
+Rename config.ini.example to config.ini and change the following values to your values:
+
+DB_SERVER = dbserver
+DB_USER = dbuser
+DB_PWD = dbpass
+DB_NAME = database
+
+MONGO_SERVER = mongoserver
+MONGO_PORT = 27017
+
+
 
 Navigate to the installation directory and run `pip install -r requirements.txt`
 

@@ -14,9 +14,6 @@ tmp/*
 #Remove Log Files
 logs/*
 !logs/.gitkeep
-<<<<<<< HEAD
 
-.git-old
-=======
-.git-old
->>>>>>> release/v1.0
+#Remove Config settings
+config.ini
