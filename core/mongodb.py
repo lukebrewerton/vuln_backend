@@ -46,6 +46,7 @@ def import_json(mongo_server,mongo_port, vuln_folder):
                     vuln_content = json.loads(json_data)
                     for vuln in vuln_content:
                         try:
+                            del vuln['_type']
                             coll.insert(vuln, continue_on_error=True)
                             vuln_counter +=1
                         except pymongo.errors.DuplicateKeyError:
