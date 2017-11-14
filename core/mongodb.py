@@ -47,7 +47,9 @@ def import_json(mongo_server,mongo_port, vuln_folder):
                     for vuln in vuln_content:
                         try:
                             del vuln['_type']
-                            coll.insert(vuln, continue_on_error=True)
+                            new_vuln = {key: vuln[key] for key in vuln if key != '_source'}
+                            new_vuln.update(vuln['_source'])
+                            coll.insert(new_vuln, continue_on_error=True)
                             vuln_counter +=1
                         except pymongo.errors.DuplicateKeyError:
                             duplicate_count +=1
