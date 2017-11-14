@@ -7,16 +7,13 @@ core/__pycache__/
 # Sphinx documentation
 docs/_build/
 
-#Vuln_files contents
+# Vuln_files contents
 tmp/*
 !tmp/.gitkeep
 
-#Remove Log Files
+# Remove Log Files
 logs/*
 !logs/.gitkeep
-<<<<<<< HEAD
 
-.git-old
-=======
-.git-old
->>>>>>> release/v1.0
+# Remove Config settings
+config.ini

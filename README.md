@@ -27,8 +27,9 @@ This is the backend responsible for the following:-
 - [License](#license)
 
 # Usage
-To use the backend run `python3 main.py` from within the main directory of the script or setup a crontab job to do this, \
-i.e. `0 1 * * 0-6 python3 /root/bin/vuln_backend/main.py >/dev/null 2>&1` 
+To use the backend run `python3 main.py` from within the main directory of the script or setup a crontab job to do this,\
+i.e. `0 1 * * 0-6 python3 /root/bin/vuln_backend/main.py >/dev/null 2>&1`
+
 
 [(Back to top)](#table-of-contents)
 
@@ -42,7 +43,17 @@ You will need to setup the MySQL/MariaDB and MongoDB databases.
 
 Thos MongoDB database is named `vulnerabilities` and this will need a collection named `vuln_sets`
 
-Then set the appropriate values in config.ini
+Rename config.ini.example to config.ini and change the following values to your values:
+
+DB_SERVER = dbserver
+DB_USER = dbuser
+DB_PWD = dbpass
+DB_NAME = database
+
+MONGO_SERVER = mongoserver
+MONGO_PORT = 27017
+
+
 
 Navigate to the installation directory and run `pip install -r requirements.txt`
 
