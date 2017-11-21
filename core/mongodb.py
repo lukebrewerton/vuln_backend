@@ -19,6 +19,7 @@ import logging
 import logging.handlers
 import os
 import pymongo
+from datetime import timedelta, datetime
 from pymongo import MongoClient
 
 
@@ -44,13 +45,18 @@ def import_json(mongo_server,mongo_port, vuln_folder):
                     file_count +=1
                     json_data = currentfile.read()
                     vuln_content = json.loads(json_data)
+                    today = datetime.now()
+                    last_month = today - timedelta(days=30)
                     for vuln in vuln_content:
                         try:
                             del vuln['_type']
                             new_vuln = {key: vuln[key] for key in vuln if key != '_source'}
                             new_vuln.update(vuln['_source'])
-                            coll.insert(new_vuln, continue_on_error=True)
-                            vuln_counter +=1
+                            if new_vuln['published'] >= str(last_month):
+                                coll.insert(new_vuln, continue_on_error=True)
+                                vuln_counter += 1
+                            else:
+                                pass
                         except pymongo.errors.DuplicateKeyError:
                             duplicate_count +=1
 
