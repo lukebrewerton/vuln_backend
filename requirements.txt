@@ -38,7 +38,7 @@ pyodbc==4.0.17
 requests==2.18.4
 six==1.11.0
 stevedore==1.26.0
-urllib3==1.22
+urllib3==1.24.2
 virtualenv==15.1.0
 virtualenv-clone==0.2.6
 virtualenvwrapper==4.8.2
