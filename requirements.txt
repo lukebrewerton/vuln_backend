@@ -15,7 +15,7 @@ enum34==1.1.6
 eventlet==0.21.0
 greenlet==0.4.12
 gssapi==1.2.0
-html5lib==0.999
+html5lib==0.999999999
 humanize==0.5.1
 hurry.filesize==0.9
 idna==2.6
